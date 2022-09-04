@@ -1,18 +1,21 @@
 #!/bin/sh
 
 ARG=$1
+value=""
 
 if [ -d $ARG ]; then
-    echo "rc=1"
+    value=1
 
 
 elif [ -x $ARG ]; then
-    echo "rc=2"
+    value=2
 
 
 elif [ -f $ARG ]; then
-    echo "rc=0"
+    value=0
 
 else
-    echo "rc=3"
+    value=3
 fi
+
+echo $value
