@@ -8,4 +8,4 @@ awk -F ";" 'BEGIN{
     }
 END{
     print "Total de obitos novos: " obitos
-    }' covid.csv
+    }' covid.csv >> obitos_totais.txt
